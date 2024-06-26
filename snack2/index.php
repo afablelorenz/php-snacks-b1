@@ -9,14 +9,14 @@ Se tutto è ok stampare "Accesso riuscito", altrimenti
 
 <?php
 
-$name=$_GET[$name];
-$email=$_GET[$email];
+$name=$_GET['name'];
+$email=$_GET['email'];
 $emailCheck1 = '.';
 $emailCheck2 = '@';
-$eta=$_GET[$eta];
+$eta=$_GET['eta'];
 $accesso = false;
 
-if(strlen($name) >=3 && (str_contains($email,$emailCheck1) && str_contains($email,$emailCheck2)) && is_numeric($eta)){
+if(strlen($name) >=3 && str_contains($email,$emailCheck1) && str_contains($email,$emailCheck2) && is_numeric($eta)){
     $accesso = true;
 }
 
