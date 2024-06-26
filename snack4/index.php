@@ -1,5 +1,16 @@
-<?php
+<!---Snack 4
+Creare un array con 15 numeri casuali, tenendo conto 
+che l’array non dovrà contenere lo stesso numero più di una volta-->
 
+<?php
+$numbersList = [];
+
+for( $i = 0; $i < 15; $i++ ){
+    $randomNumber = rand(1,100);
+    if(!in_array($randomNumber, $numbersList)){
+        $numbersList[] = $randomNumber;
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +23,14 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        
+        <h2>Numeri Random</h2>
+        <ul>
+            <?php
+                foreach($numbersList as $index){
+                    echo "<li>".$index."</li>";
+                }
+            ?>
+        </ul>
         <script src="" async defer></script>
     </body>
 </html>
