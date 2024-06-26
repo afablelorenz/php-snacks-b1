@@ -60,8 +60,15 @@ $posts = [
     </head>
     <body>
         <h2>
-
+            Posts
         </h2>
+        <?php
+            foreach ($posts as $date => $postsList){
+                echo '<h3> Date: '.$date.'</h3>';
+            }
+
+
+        ?>
         <script src="" async defer></script>
     </body>
 </html>
