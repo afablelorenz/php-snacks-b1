@@ -30,6 +30,7 @@ Ogni punto un nuovo paragrafo.--->
         <p>
             <?php echo $paragrafo;?>
         </p>
+        <h4>Frasi:  </h4>
         <?php
             foreach ($frasi as $frase){
                 echo '<p>'.$frase.'</p><br>';
