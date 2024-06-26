@@ -65,6 +65,12 @@ $posts = [
         <?php
             foreach ($posts as $date => $postsList){
                 echo '<h3> Date: '.$date.'</h3>';
+                foreach ($postsList as $post){
+                    echo '<p>Title: '.$post['title'].'</p>';
+                    echo '<p>Author: '.$post['author'].'</p>';
+                    echo '<p>'.$post['text'].'</p><br>';
+                    
+                }
             }
 
 
